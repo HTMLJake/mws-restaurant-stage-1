@@ -1,8 +1,6 @@
 let index = 1;
 const StaticCacheName = "Cache-";
 
-//test
-
 self.addEventListener("fetch", function (event) {
     let e = event.request;
     let url = event.request.url;
@@ -12,13 +10,8 @@ self.addEventListener("fetch", function (event) {
             return response ? response : fetch(e);    
         })
     );
-
-    /* event.waitUntil(
-        caches.open(`${StaticCacheName}${index}`).then(function (cache) {
-            return cache.add(url.includes('googleapi') ? "" : url);
-        })
-    ); */
 });
+
 //Array of urls to cache
 let itemsToCache = ['index.html','restaurant.html','/','data/restaurants.json','css/styles.css','js/dbhelper.js','js/main.js', 'js/restaurant_info.js'];
 
