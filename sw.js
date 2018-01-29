@@ -13,7 +13,7 @@ self.addEventListener("fetch", function (event) {
 });
 
 //Array of urls to cache
-let itemsToCache = ['index.html','restaurant.html','/','data/restaurants.json','css/styles.css','js/dbhelper.js','js/main.js', 'js/restaurant_info.js'];
+let itemsToCache = ['index.html','restaurant.html','data/restaurants.json','css/styles.css','js/dbhelper.js','js/main.js', 'js/restaurant_info.js'];
 
 self.addEventListener("install", function (event) {
         caches.open(`${StaticCacheName}${index}`).then(function (cache) {
